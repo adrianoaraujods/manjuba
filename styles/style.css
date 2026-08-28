@@ -12,6 +12,10 @@
 	--muted: #b0aba5;
 	--success: #2ea048;
 	--destructive: #d53841;
+	--font-heading: "Abril Fatface", Georgia, "Times New Roman", serif;
+	--font-display: "Lexend Deca", sans-serif;
+	--font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
+		Arial, sans-serif;
 }
 
 /* Reset */
@@ -27,22 +31,26 @@ html {
 }
 
 body {
-	font-family:
-		system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+	font-family: var(--font-body);
 	font-size: 16px;
 	line-height: 1.625;
-	background: var(--bg);
-	color: var(--text);
+	background: var(--background);
+	color: var(--foreground);
 }
 
-h1,
+h1 {
+	font-family: var(--font-display);
+	font-weight: 600;
+	color: var(--text-heading);
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-	font-family: Georgia, "Times New Roman", serif;
-	font-weight: 600;
+	font-family: var(--font-heading);
+	font-weight: 400;
 	color: var(--text-heading);
 }
 
