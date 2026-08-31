@@ -79,6 +79,7 @@ ul {
 }
 
 /* Navbar */
+
 .navbar {
 	background: var(--background);
 	display: flex;
@@ -263,6 +264,7 @@ ul {
 }
 
 /* Hero Section */
+
 .hero-section {
 	position: relative;
 	height: calc(90svh - 122px);
@@ -445,4 +447,72 @@ ul {
 	.hero-section__gradient--secondary {
 		display: none;
 	}
+}
+
+/* Service Section */
+h2 {
+	font-size: xx-large;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h3 {
+	font-size: x-large;
+}
+
+.services-section,
+.plans-section {
+	background-color: var(--secondary);
+	color: var(--secondary-foreground);
+}
+
+.services-section,
+.barbers-section,
+.plans-section,
+.appointment-section,
+.galery-section {
+	padding: 4rem 1rem 6rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.services-section__list {
+	max-width: 1440px;
+	width: 100%;
+	margin-inline: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 360px));
+	justify-content: center;
+	gap: 3rem;
+}
+
+.service-card {
+	background-color: var(--secondary-hover);
+	width: 100%;
+	max-width: 360px;
+	padding-bottom: 0.5rem;
+	outline: 2px solid #ffffff30;
+	outline-offset: 0.5rem;
+	margin: 0.5rem;
+}
+
+.service-card__image {
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+}
+
+.service-card__title {
+	margin-inline: 1rem;
+}
+
+.service-card__description {
+	margin-inline: 1rem;
+}
+
+.service-card__price {
+	font-size: xx-large;
+	font-family: var(--font-heading);
+	margin-inline: 1rem;
 }
