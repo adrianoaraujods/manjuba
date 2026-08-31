@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@400;500;600;700&family=Lexend+Deca:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@400;500;600;700&family=Lexend+Deca:wght@900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -71,12 +71,29 @@
   </header>
 
   <main id="main">
-    <section class="hero-section"></section>
+    <section class="hero-section">
+      <div class="hero-section__gradient hero-section__gradient--primary-left"></div>
+      <div class="hero-section__gradient hero-section__gradient--secondary"></div>
+      <div class="hero-section__gradient hero-section__gradient--primary-right"></div>
+
+      <div class="hero-section__container">
+        <h1 class="hero-section__title">
+          <span>MAN</span> <span>JUBA</span>
+        </h1>
+        
+        <a href="#appointment" class="hero-section__cta">Agendar</a>
+        
+        <p class="hero-section__description">Majestoso como um leão</p>
+      </div>
+
+      <img class="hero-section__image" src="./assets/hero.webp" alt="Foto do fundador">
+    </section>
+    
     <section id="services" class="services-section"></section>
     <section id="barbers" class="barbers-section"></section>
-    <section id="plans" class=""></section>
-    <section id="appointment" class="hero-section"></section>
-    <section id="galery" class="hero-section"></section>
+    <section id="plans" class="plans-section"></section>
+    <section id="appointment" class="appointment-section"></section>
+    <section id="galery" class="galery-section"></section>
   </main>
 
   <footer class="footer"></footer>
