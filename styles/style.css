@@ -486,6 +486,10 @@ h3 {
 	gap: 3rem;
 }
 
+.plans-section__list {
+	align-items: center;
+}
+
 .card {
 	width: 100%;
 	max-width: 360px;
@@ -502,7 +506,12 @@ h3 {
 	outline: 2px solid #ffffff30;
 }
 
-.barbers-section .card {
+.plans-section .card {
+	height: fit-content;
+}
+
+.barbers-section .card,
+.card.card--premium {
 	background-color: var(--primary-foreground);
 	color: var(--background);
 }
@@ -527,6 +536,11 @@ h3 {
 	font-size: xx-large;
 	font-family: var(--font-heading);
 	margin-inline: 1rem;
+}
+
+.plans-section .card__price {
+	margin-inline: auto;
+	color: var(--primary);
 }
 
 .card .button {
@@ -570,4 +584,37 @@ h3 {
 	width: 1.125rem;
 	height: 1.125rem;
 	color: var(--primary-foreground);
+}
+
+.plan-list {
+	margin-inline: 1rem;
+	opacity: 0.8;
+}
+
+.plan-list__item {
+	margin-block: 0.25rem;
+	margin-left: 1.5rem;
+	position: relative;
+}
+
+.plan-list__item::before {
+	content: url("../assets/check.svg");
+	position: absolute;
+	left: -0.5rem;
+	transform: translateX(-100%) translateY(25%);
+	width: 0.875rem;
+	height: 0.875rem;
+}
+
+/* Mobile: 1 column, premium first */
+@media (max-width: 1210px) {
+	.plans-section__list .card--premium {
+		order: +1;
+	}
+}
+
+@media (max-width: 810px) {
+	.plans-section__list .card--premium {
+		order: -1;
+	}
 }
