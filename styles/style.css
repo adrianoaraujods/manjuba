@@ -317,11 +317,7 @@ ul {
 	line-height: 1.15;
 }
 
-.hero-section__cta {
-	grid-column: 1;
-	grid-row: 2;
-	justify-self: start;
-	margin-top: 2rem;
+.button {
 	padding: 0.85rem 2.25rem;
 	background-color: var(--primary);
 	color: var(--primary-foreground);
@@ -334,9 +330,16 @@ ul {
 		background-color 0.2s ease;
 }
 
-.hero-section__cta:hover {
+.button:hover {
 	background-color: var(--primary-hover);
 	transform: translateY(-2px);
+}
+
+.hero-section .button {
+	grid-column: 1;
+	grid-row: 2;
+	justify-self: start;
+	margin-top: 2rem;
 }
 
 .hero-section__image {
@@ -424,7 +427,7 @@ ul {
 		padding: 0;
 	}
 
-	.hero-section__cta {
+	.hero-section .button {
 		order: 3;
 		margin-top: 1.25rem;
 		align-self: flex-start;
@@ -466,18 +469,14 @@ h3 {
 	color: var(--secondary-foreground);
 }
 
-.services-section,
-.barbers-section,
-.plans-section,
-.appointment-section,
-.galery-section {
+.section {
 	padding: 4rem 1rem 6rem;
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
 }
 
-.services-section__list {
+.grid {
 	max-width: 1440px;
 	width: 100%;
 	margin-inline: auto;
@@ -487,32 +486,50 @@ h3 {
 	gap: 3rem;
 }
 
-.service-card {
-	background-color: var(--secondary-hover);
+.card {
 	width: 100%;
 	max-width: 360px;
 	padding-bottom: 0.5rem;
-	outline: 2px solid #ffffff30;
 	outline-offset: 0.5rem;
 	margin: 0.5rem;
+	display: flex;
+	flex-direction: column;
 }
 
-.service-card__image {
+.services-section .card,
+.plans-section .card {
+	background-color: var(--secondary-hover);
+	outline: 2px solid #ffffff30;
+}
+
+.barbers-section .card {
+	background-color: var(--primary-foreground);
+	color: var(--background);
+}
+
+.card__image {
 	width: 100%;
 	aspect-ratio: 4 / 3;
 	object-fit: cover;
 }
 
-.service-card__title {
+.card__title {
+	margin-top: 0.5rem;
 	margin-inline: 1rem;
 }
 
-.service-card__description {
+.card__description {
 	margin-inline: 1rem;
+	margin-bottom: 1rem;
 }
 
-.service-card__price {
+.card__price {
 	font-size: xx-large;
 	font-family: var(--font-heading);
 	margin-inline: 1rem;
+}
+
+.card .button {
+	margin-top: auto;
+	margin-inline: auto;
 }
