@@ -103,13 +103,29 @@ select:focus {
 }
 
 /* Navbar */
-
 .navbar {
-	background: var(--background);
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 1000;
+	background: transparent;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	padding: 1rem;
+	animation: navbar-scroll-bg linear both;
+	animation-timeline: scroll(root block);
+	animation-range: 0px 60svh;
+}
+
+@keyframes navbar-scroll-bg {
+	from {
+		background-color: transparent;
+	}
+	to {
+		background-color: var(--background);
+	}
 }
 
 .navbar__content {
@@ -298,6 +314,8 @@ select:focus {
 	overflow: hidden;
 	max-width: 1440px;
 	margin-inline: auto;
+	margin-top: 122px;
+	overflow: visible;
 }
 
 .hero-section__container {
