@@ -533,3 +533,41 @@ h3 {
 	margin-top: auto;
 	margin-inline: auto;
 }
+
+.card__media {
+	position: relative;
+}
+
+.card__socials {
+	position: absolute;
+	bottom: 1rem;
+	right: 1rem;
+	display: flex;
+	gap: 0.5rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.card__social-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	background: var(--primary);
+	color: var(--primary-foreground);
+	text-decoration: none;
+	border-radius: 50%;
+	transition: background 0.2s ease;
+}
+
+.card__social-link:hover {
+	background: var(--primary-hover);
+}
+
+.card__social-icon {
+	width: 1.125rem;
+	height: 1.125rem;
+	color: var(--primary-foreground);
+}
