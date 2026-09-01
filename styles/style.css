@@ -684,7 +684,8 @@ h3 {
 
 .appointment-form #name,
 .appointment-form #email,
-.appointment-form #barber {
+.appointment-form #barber,
+.appointment-form .button {
 	grid-column: 1 / -1;
 }
 
@@ -698,12 +699,21 @@ h3 {
 	grid-column: 2 / 3;
 }
 
-@media (max-width: 768px) {
-	.appointment-section__title {
-		font-size: 2rem;
-		margin-bottom: 2rem;
+@media (max-width: 900px) {
+	.appointment-section {
+		grid-template-columns: 1fr;
 	}
 
+	.appointment-section__title {
+		grid-column: 1;
+	}
+
+	.contact-information {
+		position: static;
+	}
+}
+
+@media (max-width: 540px) {
 	.appointment-form {
 		grid-template-columns: 1fr;
 	}
