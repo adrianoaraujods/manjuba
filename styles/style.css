@@ -172,6 +172,11 @@ select:focus {
 	background: var(--secondary-hover);
 }
 
+.navbar__link a:focus-visible {
+	outline: 2px solid var(--primary);
+	outline-offset: 2px;
+}
+
 .navbar__socials {
 	display: flex;
 	gap: 1rem;
@@ -192,6 +197,11 @@ select:focus {
 
 .navbar__social-link:hover {
 	background: var(--secondary-hover);
+}
+
+.navbar__social-link:focus-visible {
+	outline: 2px solid var(--primary);
+	outline-offset: 2px;
 }
 
 .navbar__social-icon {
@@ -375,6 +385,11 @@ select:focus {
 .button:hover {
 	background-color: var(--primary-hover);
 	transform: translateY(-2px);
+}
+
+.button:focus-visible {
+	outline: 3px solid var(--primary);
+	outline-offset: 3px;
 }
 
 .hero-section .button {
@@ -670,6 +685,11 @@ h3 {
 	transform: scale(1.1);
 }
 
+.card__social-link:focus-visible {
+	outline: 2px solid var(--primary);
+	outline-offset: 2px;
+}
+
 .card__social-icon {
 	width: 1.125rem;
 	height: 1.125rem;
@@ -846,6 +866,11 @@ h3 {
 	color: var(--primary);
 }
 
+.footer__social-link:focus-visible {
+	outline: 3px solid var(--primary);
+	outline-offset: 3px;
+}
+
 .footer__social-link svg {
 	width: 28px;
 	height: 28px;
@@ -871,6 +896,11 @@ h3 {
 
 .footer__menu-link:hover {
 	color: var(--primary);
+}
+
+.footer__menu-link:focus-visible {
+	outline: 2px solid var(--primary);
+	outline-offset: 2px;
 }
 
 .footer__hours-text {
