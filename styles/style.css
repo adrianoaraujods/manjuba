@@ -409,7 +409,7 @@ select:focus {
 	background: var(--secondary);
 	top: 10%;
 	left: 50%;
-	transform: translateX(-50%);
+	animation: drift-center 20s ease-in-out infinite;
 }
 
 .hero-section__gradient--primary-left {
@@ -419,6 +419,8 @@ select:focus {
 	left: 10%;
 	top: 40%;
 	opacity: 0.4;
+	animation: drift 20s ease-in-out infinite;
+	animation-delay: -7s;
 }
 
 .hero-section__gradient--primary-right {
@@ -428,6 +430,32 @@ select:focus {
 	top: 20%;
 	right: 10%;
 	opacity: 0.4;
+	animation: drift 20s ease-in-out infinite;
+	animation-delay: -14s;
+}
+
+@keyframes drift {
+	0%, 100% {
+		transform: translate(0, 0);
+	}
+	33% {
+		transform: translate(30px, -20px);
+	}
+	66% {
+		transform: translate(-20px, 20px);
+	}
+}
+
+@keyframes drift-center {
+	0%, 100% {
+		transform: translateX(-50%) translate(0, 0);
+	}
+	33% {
+		transform: translateX(-50%) translate(30px, -20px);
+	}
+	66% {
+		transform: translateX(-50%) translate(-20px, 20px);
+	}
 }
 
 @media (max-width: 740px) {
