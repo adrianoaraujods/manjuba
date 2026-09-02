@@ -540,6 +540,19 @@ h3 {
 	margin: 0.5rem;
 	display: flex;
 	flex-direction: column;
+	cursor: pointer;
+	transition: transform 0.35s ease, box-shadow 0.35s ease;
+	will-change: transform;
+	overflow: hidden;
+}
+
+.card:hover {
+	transform: translateY(-6px) scale(1.03) rotate(-1deg);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.card:hover .card__image {
+	transform: scale(1.08);
 }
 
 .services-section .card,
@@ -562,6 +575,7 @@ h3 {
 	width: 100%;
 	aspect-ratio: 4 / 3;
 	object-fit: cover;
+	transition: transform 0.5s ease;
 }
 
 .card__title {
@@ -592,6 +606,7 @@ h3 {
 
 .card__media {
 	position: relative;
+	overflow: hidden;
 }
 
 .card__socials {
@@ -615,11 +630,16 @@ h3 {
 	color: var(--primary-foreground);
 	text-decoration: none;
 	border-radius: 50%;
-	transition: background 0.2s ease;
+	transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .card__social-link:hover {
 	background: var(--primary-hover);
+	transform: scale(1.1);
+}
+
+.card:hover .card__social-link {
+	transform: scale(1.1);
 }
 
 .card__social-icon {
